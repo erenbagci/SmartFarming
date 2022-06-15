@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvl-m9-AV6">
+                                <rect key="frame" x="77" y="276" width="212" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Farming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZX-VV-OS3">
+                                <rect key="frame" x="77" y="169" width="212" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Fa5-3O-3Mh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-2z-w3F">
+                                <rect key="frame" x="77" y="329" width="212" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-cv-LhU">
+                                <rect key="frame" x="77" y="348" width="90" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="1xZ-8V-wVe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zup-3m-oKU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-Hr-VvV">
+                                <rect key="frame" x="196" y="348" width="93" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDF-mX-lfn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="trailing" secondItem="wvl-m9-AV6" secondAttribute="trailing" id="0If-9Q-qmk"/>
+                            <constraint firstItem="wvl-m9-AV6" firstAttribute="top" secondItem="0ZX-VV-OS3" secondAttribute="bottom" constant="62" id="0oA-no-2ah"/>
+                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="leading" secondItem="wvl-m9-AV6" secondAttribute="leading" id="Hwi-WV-3H9"/>
+                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="JPD-zc-cz1"/>
+                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="trailing" secondItem="fbB-Hr-VvV" secondAttribute="trailing" id="MHI-rS-5LS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ZX-VV-OS3" secondAttribute="trailing" constant="86" id="Pdx-ZW-jje"/>
+                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="top" secondItem="wvl-m9-AV6" secondAttribute="bottom" constant="19" id="YGG-OT-tvT"/>
+                            <constraint firstItem="wvl-m9-AV6" firstAttribute="leading" secondItem="Oyo-2z-w3F" secondAttribute="leading" id="c6W-sr-DRZ"/>
+                            <constraint firstItem="fbB-Hr-VvV" firstAttribute="leading" secondItem="6lx-cv-LhU" secondAttribute="trailing" constant="29" id="fOb-Y7-5WB"/>
+                            <constraint firstItem="6lx-cv-LhU" firstAttribute="top" secondItem="Oyo-2z-w3F" secondAttribute="bottom" constant="29" id="mOn-bq-S4Q"/>
+                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="leading" secondItem="6lx-cv-LhU" secondAttribute="leading" id="pqn-Va-QOL"/>
+                            <constraint firstItem="wvl-m9-AV6" firstAttribute="trailing" secondItem="Oyo-2z-w3F" secondAttribute="trailing" id="tcV-Rb-PZh"/>
+                            <constraint firstItem="6lx-cv-LhU" firstAttribute="baseline" secondItem="fbB-Hr-VvV" secondAttribute="baseline" id="uXW-sz-DGE"/>
+                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="yEm-Rv-NW6"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lMj-cH-DGI"/>
+                    <connections>
+                        <outlet property="emailText" destination="wvl-m9-AV6" id="Lhn-6r-8yV"/>
+                        <outlet property="passwordText" destination="Oyo-2z-w3F" id="fXu-i3-MZl"/>
+                        <segue destination="WH0-al-0iP" kind="presentation" identifier="toListVC" modalPresentationStyle="fullScreen" id="9Sv-PR-pni"/>
+                        <segue destination="WH0-al-0iP" kind="show" id="7qq-kF-ODg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1194.4000000000001" y="-146.17691154422789"/>
+        </scene>
+        <!--ListVC-->
+        <scene sceneID="n8P-Yp-ngl">
+            <objects>
+                <viewController id="XvO-cH-YQA" customClass="ListVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6u-cv-oYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EfU-Kr-G6w">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y7R-NK-fZZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EfU-Kr-G6w" firstAttribute="leading" secondItem="Y7R-NK-fZZ" secondAttribute="leading" id="7Ej-QI-Mde"/>
+                            <constraint firstItem="Y7R-NK-fZZ" firstAttribute="trailing" secondItem="EfU-Kr-G6w" secondAttribute="trailing" id="CXG-ar-9Ny"/>
+                            <constraint firstItem="EfU-Kr-G6w" firstAttribute="top" secondItem="Y7R-NK-fZZ" secondAttribute="top" id="Cs3-yA-bFT"/>
+                            <constraint firstItem="Y7R-NK-fZZ" firstAttribute="bottom" secondItem="EfU-Kr-G6w" secondAttribute="bottom" id="z5H-Jd-gcJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GKt-rB-cWk"/>
+                    <connections>
+                        <outlet property="tableView" destination="EfU-Kr-G6w" id="DjZ-gT-wtt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeToLogin" id="nak-Pb-rdL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cy7-OQ-h7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="-145.27736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z37-EX-oFD">
+            <objects>
+                <navigationController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="WH0-al-0iP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ew8-dd-XWt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kyK-0H-R7e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XvO-cH-YQA" kind="relationship" relationship="rootViewController" id="Otz-1t-hNl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U18-2s-WuL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290.39999999999998" y="-145.27736131934034"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Sv-PR-pni"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65C86C5E47D8F5ECC67016E7 /* Pods_SmartFarming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39921B1AC83543EFF098EC4 /* Pods_SmartFarming.framework */; };
+		B057105B285A162600B555C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B057105A285A162600B555C0 /* GoogleService-Info.plist */; };
+		B057105D285A273200B555C0 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057105C285A273200B555C0 /* ListVC.swift */; };
 		B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */; };
 		B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */; };
 		B0A8BB4928586FAC0066E4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4828586FAC0066E4E3 /* ViewController.swift */; };
@@ -16,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E01CF1676D2BBCA05D77B91 /* Pods-SmartFarming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarming.debug.xcconfig"; path = "Target Support Files/Pods-SmartFarming/Pods-SmartFarming.debug.xcconfig"; sourceTree = "<group>"; };
+		90FD58EA980FFB492368A142 /* Pods-SmartFarming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarming.release.xcconfig"; path = "Target Support Files/Pods-SmartFarming/Pods-SmartFarming.release.xcconfig"; sourceTree = "<group>"; };
+		B057105A285A162600B555C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B057105C285A273200B555C0 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		B0A8BB4128586FAC0066E4E3 /* SmartFarming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A8BB5028586FAD0066E4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0A8BB5228586FAD0066E4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39921B1AC83543EFF098EC4 /* Pods_SmartFarming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C86C5E47D8F5ECC67016E7 /* Pods_SmartFarming.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DE72662257624F668CC8C58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CF1676D2BBCA05D77B91 /* Pods-SmartFarming.debug.xcconfig */,
+				90FD58EA980FFB492368A142 /* Pods-SmartFarming.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B0A8BB3828586FAC0066E4E3 = {
 			isa = PBXGroup;
 			children = (
 				B0A8BB4328586FAC0066E4E3 /* SmartFarming */,
 				B0A8BB4228586FAC0066E4E3 /* Products */,
+				8DE72662257624F668CC8C58 /* Pods */,
+				D364A30FF557F0E7C1AFFFEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +83,18 @@
 				B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */,
 				B0A8BB4F28586FAD0066E4E3 /* LaunchScreen.storyboard */,
 				B0A8BB5228586FAD0066E4E3 /* Info.plist */,
+				B057105A285A162600B555C0 /* GoogleService-Info.plist */,
+				B057105C285A273200B555C0 /* ListVC.swift */,
 			);
 			path = SmartFarming;
+			sourceTree = "<group>";
+		};
+		D364A30FF557F0E7C1AFFFEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B39921B1AC83543EFF098EC4 /* Pods_SmartFarming.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0A8BB5528586FAD0066E4E3 /* Build configuration list for PBXNativeTarget "SmartFarming" */;
 			buildPhases = (
+				745E7CA9CD8271048D8356CF /* [CP] Check Pods Manifest.lock */,
 				B0A8BB3D28586FAC0066E4E3 /* Sources */,
 				B0A8BB3E28586FAC0066E4E3 /* Frameworks */,
 				B0A8BB3F28586FAC0066E4E3 /* Resources */,
+				E8024D26E1A439809DC7AF69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A8BB5128586FAD0066E4E3 /* LaunchScreen.storyboard in Resources */,
+				B057105B285A162600B555C0 /* GoogleService-Info.plist in Resources */,
 				B0A8BB4E28586FAD0066E4E3 /* Assets.xcassets in Resources */,
 				B0A8BB4C28586FAC0066E4E3 /* Main.storyboard in Resources */,
 			);
@@ -133,11 +166,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		745E7CA9CD8271048D8356CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartFarming-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8024D26E1A439809DC7AF69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartFarming/Pods-SmartFarming-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartFarming/Pods-SmartFarming-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartFarming/Pods-SmartFarming-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B0A8BB3D28586FAC0066E4E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B057105D285A273200B555C0 /* ListVC.swift in Sources */,
 				B0A8BB4928586FAC0066E4E3 /* ViewController.swift in Sources */,
 				B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */,
 				B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */,
@@ -282,6 +358,7 @@
 		};
 		B0A8BB5628586FAD0066E4E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E01CF1676D2BBCA05D77B91 /* Pods-SmartFarming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +387,7 @@
 		};
 		B0A8BB5728586FAD0066E4E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90FD58EA980FFB492368A142 /* Pods-SmartFarming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
