@@ -19,10 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
             
             let currentUser = Auth.auth().currentUser
-            if currentUser != nil {
+            if let user = currentUser {
                 let board = UIStoryboard(name: "Main", bundle: nil)
                 let tabBar = board.instantiateViewController(identifier: "tabBar") as! UINavigationController
                 window?.rootViewController = tabBar
+                if let userEmail = user.email {
+                    FarmModel.sharedInstance.currentUserEmail = userEmail
+                }
             }
             
             guard let _ = (scene as? UIWindowScene) else { return }

@@ -13,41 +13,41 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvl-m9-AV6">
-                                <rect key="frame" x="77" y="276" width="212" height="34"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-wa-3g7" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="42" y="69" width="291" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="farmer"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvl-m9-AV6">
+                                <rect key="frame" x="81" y="300" width="212" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Farming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZX-VV-OS3">
-                                <rect key="frame" x="77" y="169" width="212" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Fa5-3O-3Mh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-2z-w3F">
-                                <rect key="frame" x="77" y="329" width="212" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-2z-w3F">
+                                <rect key="frame" x="81" y="364" width="212" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-cv-LhU">
-                                <rect key="frame" x="77" y="348" width="90" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="1xZ-8V-wVe"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lx-cv-LhU">
+                                <rect key="frame" x="81" y="428" width="90" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
                                 <connections>
                                     <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zup-3m-oKU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-Hr-VvV">
-                                <rect key="frame" x="196" y="348" width="93" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-Hr-VvV">
+                                <rect key="frame" x="200" y="428" width="93" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                                 <connections>
@@ -57,25 +57,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="trailing" secondItem="wvl-m9-AV6" secondAttribute="trailing" id="0If-9Q-qmk"/>
-                            <constraint firstItem="wvl-m9-AV6" firstAttribute="top" secondItem="0ZX-VV-OS3" secondAttribute="bottom" constant="62" id="0oA-no-2ah"/>
-                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="leading" secondItem="wvl-m9-AV6" secondAttribute="leading" id="Hwi-WV-3H9"/>
-                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="JPD-zc-cz1"/>
-                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="trailing" secondItem="fbB-Hr-VvV" secondAttribute="trailing" id="MHI-rS-5LS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ZX-VV-OS3" secondAttribute="trailing" constant="86" id="Pdx-ZW-jje"/>
-                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="top" secondItem="wvl-m9-AV6" secondAttribute="bottom" constant="19" id="YGG-OT-tvT"/>
-                            <constraint firstItem="wvl-m9-AV6" firstAttribute="leading" secondItem="Oyo-2z-w3F" secondAttribute="leading" id="c6W-sr-DRZ"/>
-                            <constraint firstItem="fbB-Hr-VvV" firstAttribute="leading" secondItem="6lx-cv-LhU" secondAttribute="trailing" constant="29" id="fOb-Y7-5WB"/>
-                            <constraint firstItem="6lx-cv-LhU" firstAttribute="top" secondItem="Oyo-2z-w3F" secondAttribute="bottom" constant="29" id="mOn-bq-S4Q"/>
-                            <constraint firstItem="Oyo-2z-w3F" firstAttribute="leading" secondItem="6lx-cv-LhU" secondAttribute="leading" id="pqn-Va-QOL"/>
-                            <constraint firstItem="wvl-m9-AV6" firstAttribute="trailing" secondItem="Oyo-2z-w3F" secondAttribute="trailing" id="tcV-Rb-PZh"/>
-                            <constraint firstItem="6lx-cv-LhU" firstAttribute="baseline" secondItem="fbB-Hr-VvV" secondAttribute="baseline" id="uXW-sz-DGE"/>
-                            <constraint firstItem="0ZX-VV-OS3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="yEm-Rv-NW6"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lMj-cH-DGI"/>
                     <connections>
+                        <outlet property="animationView" destination="Pof-wa-3g7" id="INN-GQ-gVN"/>
                         <outlet property="emailText" destination="wvl-m9-AV6" id="Lhn-6r-8yV"/>
                         <outlet property="passwordText" destination="Oyo-2z-w3F" id="fXu-i3-MZl"/>
                         <segue destination="WH0-al-0iP" kind="presentation" identifier="toListVC" modalPresentationStyle="fullScreen" id="9Sv-PR-pni"/>
@@ -95,8 +80,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EfU-Kr-G6w">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FarmTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FarmTableViewCell" id="z0e-84-55w" customClass="FarmTableViewCell" customModule="SmartFarming" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z0e-84-55w" id="hSy-L3-7hl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RM3-Kd-GIg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd6-Yk-WGI">
+                                                            <rect key="frame" x="12" y="11.5" width="351" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="sd6-Yk-WGI" firstAttribute="leading" secondItem="RM3-Kd-GIg" secondAttribute="leading" constant="12" id="Utf-jz-P9b"/>
+                                                        <constraint firstItem="sd6-Yk-WGI" firstAttribute="centerY" secondItem="RM3-Kd-GIg" secondAttribute="centerY" id="sv4-CL-Jbg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sd6-Yk-WGI" secondAttribute="trailing" constant="12" id="zIF-9D-fNL"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RM3-Kd-GIg" firstAttribute="leading" secondItem="hSy-L3-7hl" secondAttribute="leading" id="GFu-e0-CNg"/>
+                                                <constraint firstAttribute="trailing" secondItem="RM3-Kd-GIg" secondAttribute="trailing" id="QY4-mJ-7Sm"/>
+                                                <constraint firstAttribute="bottom" secondItem="RM3-Kd-GIg" secondAttribute="bottom" id="YcL-17-Ksk"/>
+                                                <constraint firstItem="RM3-Kd-GIg" firstAttribute="top" secondItem="hSy-L3-7hl" secondAttribute="top" id="mQt-5W-p7T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="farmNameLabel" destination="sd6-Yk-WGI" id="Dqn-8y-UUg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y7R-NK-fZZ"/>
@@ -112,11 +135,133 @@
                     <connections>
                         <outlet property="tableView" destination="EfU-Kr-G6w" id="DjZ-gT-wtt"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="homeToLogin" id="nak-Pb-rdL"/>
+                        <segue destination="8nj-Ju-B6T" kind="show" identifier="farmInfoVC" id="vDA-lF-oZ0"/>
+                        <segue destination="yY7-5t-YG9" kind="show" identifier="toDetailsVC" id="kVX-oK-J9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy7-OQ-h7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="-145.27736131934034"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="GLp-dn-VBH">
+            <objects>
+                <viewController id="yY7-5t-YG9" customClass="DetailsVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j33-Yk-msy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tarla Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-r2-KCP">
+                                <rect key="frame" x="29" y="56" width="316" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ekildiği Tarih:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-Zi-deL">
+                                <rect key="frame" x="29" y="181" width="316" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biçileceği Tarih:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNt-UX-DAA">
+                                <rect key="frame" x="29" y="236" width="316" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h15-af-bNp">
+                                <rect key="frame" x="0.0" y="314" width="375" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ekilen Edilen Ürün:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8l-YO-gbR">
+                                <rect key="frame" x="29" y="117" width="316" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P0V-Dh-gfR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Am-7M-oS2"/>
+                    <connections>
+                        <outlet property="detailsMapView" destination="h15-af-bNp" id="ggq-yn-R76"/>
+                        <outlet property="farmNameLabel" destination="RjD-r2-KCP" id="kPq-kn-Z55"/>
+                        <outlet property="harvestDateLabel" destination="sNt-UX-DAA" id="1KK-9Y-mds"/>
+                        <outlet property="plantedDateLabel" destination="m6N-Zi-deL" id="M0Q-fq-WY7"/>
+                        <outlet property="plantedVegetablesLabel" destination="i8l-YO-gbR" id="xwZ-vs-Uq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txV-yO-rkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="586.95652173913049"/>
+        </scene>
+        <!--Farm InfoVC-->
+        <scene sceneID="gwc-mF-uc4">
+            <objects>
+                <viewController id="8nj-Ju-B6T" customClass="FarmInfoVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cT0-Br-iFz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="farm name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWs-eS-4gp">
+                                <rect key="frame" x="53" y="55" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="planted vegetables" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgu-hl-1Kj">
+                                <rect key="frame" x="53" y="108" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="planted date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6EM-YJ-eWy">
+                                <rect key="frame" x="54" y="164" width="267" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="harvest date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnr-WW-wSH">
+                                <rect key="frame" x="54" y="222" width="267" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oxJ-ID-qZi">
+                                <rect key="frame" x="0.0" y="264" width="375" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXw-YV-0zr">
+                                <rect key="frame" x="150" y="592" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="8nj-Ju-B6T" eventType="touchUpInside" id="6Xf-9K-Wcv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fpl-b3-bi0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wxs-rE-6P5"/>
+                    <connections>
+                        <outlet property="farmNameText" destination="HWs-eS-4gp" id="Gl2-Wx-VzL"/>
+                        <outlet property="harvestDateText" destination="mnr-WW-wSH" id="9Nh-bZ-Sad"/>
+                        <outlet property="mapView" destination="oxJ-ID-qZi" id="ayj-wq-0I4"/>
+                        <outlet property="plantedDateText" destination="6EM-YJ-eWy" id="bLt-Gm-Fqv"/>
+                        <outlet property="plantedVegetablesText" destination="mgu-hl-1Kj" id="A2X-RJ-ZT9"/>
+                        <segue destination="XvO-cH-YQA" kind="presentation" identifier="toTableView" modalPresentationStyle="fullScreen" id="8So-oR-zbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkG-ZQ-xBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488.8" y="-145.27736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z37-EX-oFD">
@@ -138,8 +283,12 @@
             <point key="canvasLocation" x="-290.39999999999998" y="-145.27736131934034"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Pof-wa-3g7"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="9Sv-PR-pni"/>
+        <segue reference="8So-oR-zbg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
