@@ -56,8 +56,8 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                         let documentID = document.documentID
                         self.documentIdArray.append(documentID)
                         
-                        if let farmName = document.get("farmName") as? String, let farmerBy = document.get("farmerBy") as? String {
-                            self.placeNameArray.append(farmName + " " + farmerBy)
+                        if let farmName = document.get("farmName") as? String{
+                            self.placeNameArray.append(farmName)
                         }
                     }
                     self.tableView.reloadData()
@@ -96,7 +96,12 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         return placeNameArray.count
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC" {
+            let destinationVC = segue.destination as! DetailsVC
+            destinationVC.chosenPlaceId = selectedPlaceId
+        }
+    }
 }
 
 
