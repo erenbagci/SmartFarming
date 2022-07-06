@@ -612,6 +612,9 @@ PODS:
     - FirebaseAnalytics (~> 9.1.0)
   - Firebase/CoreOnly (9.1.0):
     - FirebaseCore (= 9.1.0)
+  - Firebase/Database (9.1.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 9.1.0)
   - Firebase/Firestore (9.1.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 9.1.0)
@@ -657,6 +660,9 @@ PODS:
     - FirebaseCore (~> 9.0)
   - FirebaseCoreInternal (9.1.0):
     - "GoogleUtilities/NSData+zlib (~> 7.7)"
+  - FirebaseDatabase (9.1.0):
+    - FirebaseCore (~> 9.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (9.1.0):
     - abseil/algorithm (~> 1.20211102.0)
     - abseil/base (~> 1.20211102.0)
@@ -800,6 +806,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
   - JSSAlertView
@@ -819,6 +826,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreExtension
     - FirebaseCoreInternal
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
     - FirebaseStorage
@@ -849,6 +857,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 2dabba3412b23b524823325739f45e520f67d1e7
   FirebaseCoreExtension: c2efdc29b8ffeaa0be3e1bd1fc59758de9b3fe6d
   FirebaseCoreInternal: f3c838ae0b41cd840bbf34f90debfede78d352e5
+  FirebaseDatabase: 6308b36dbc7725204a32f1ac638e730a9aabf5bc
   FirebaseFirestore: 20b1df7d65058b038745ecebb60f741a10e40a6f
   FirebaseInstallations: a91c74276b544524ce144c8315d8cdbce2dbe30b
   FirebaseStorage: 1706d112a8a9d39f3b5465d00a0cb75725f16f63
@@ -867,6 +876,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
 
-PODFILE CHECKSUM: f3bc2fde2fe7d7589651996b51519e836d8e66ce
+PODFILE CHECKSUM: 17a1afc0d948f5b2b8d778e8031be67facfbbbff
 
 COCOAPODS: 1.11.3

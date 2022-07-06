@@ -9,7 +9,7 @@ import UIKit
 
 class FarmTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var farmNameLabel: UILabel!
+    @IBOutlet weak var farmNameText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +23,6 @@ class FarmTableViewCell: UITableViewCell {
     }
     
     func configUI(farmName: String) {
-        farmNameLabel.text = farmName
+        farmNameText.text = farmName
     }
 }

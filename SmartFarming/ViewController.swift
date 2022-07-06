@@ -59,7 +59,7 @@ class ViewController: UIViewController {
                 }else {
                     self.performSegue(withIdentifier: "toListVC", sender: nil)
                     //singletondaki mevcut hesabın güncellenmesi
-                    FarmModel.sharedInstance.currentUserEmail = email
+                    FarmGlobal.sharedInstance.currentUserEmail = email
                   }
             }
         }else {

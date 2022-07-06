@@ -13,7 +13,7 @@
 		B0571060285A362200B555C0 /* ServiceResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057105F285A362200B555C0 /* ServiceResponseType.swift */; };
 		B0571062285A404F00B555C0 /* farmer.json in Resources */ = {isa = PBXBuildFile; fileRef = B0571061285A404F00B555C0 /* farmer.json */; };
 		B0571064285A4C3800B555C0 /* FarmInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0571063285A4C3800B555C0 /* FarmInfoVC.swift */; };
-		B06643E7285B9996004B643F /* FarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06643E6285B9996004B643F /* FarmModel.swift */; };
+		B06643E7285B9996004B643F /* FarmGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06643E6285B9996004B643F /* FarmGlobal.swift */; };
 		B06643EB285BAA49004B643F /* FarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06643E9285BAA49004B643F /* FarmTableViewCell.swift */; };
 		B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */; };
 		B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */; };
@@ -21,6 +21,7 @@
 		B0A8BB4C28586FAC0066E4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4A28586FAC0066E4E3 /* Main.storyboard */; };
 		B0A8BB4E28586FAD0066E4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */; };
 		B0A8BB5128586FAD0066E4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4F28586FAD0066E4E3 /* LaunchScreen.storyboard */; };
+		B0B7C5C72868F99F006F8384 /* MapDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */; };
 		B0CF221D285CC55400D31918 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF221C285CC55400D31918 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,7 @@
 		B057105F285A362200B555C0 /* ServiceResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponseType.swift; sourceTree = "<group>"; };
 		B0571061285A404F00B555C0 /* farmer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = farmer.json; sourceTree = "<group>"; };
 		B0571063285A4C3800B555C0 /* FarmInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmInfoVC.swift; sourceTree = "<group>"; };
-		B06643E6285B9996004B643F /* FarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmModel.swift; sourceTree = "<group>"; };
+		B06643E6285B9996004B643F /* FarmGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmGlobal.swift; sourceTree = "<group>"; };
 		B06643E9285BAA49004B643F /* FarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTableViewCell.swift; sourceTree = "<group>"; };
 		B0A8BB4128586FAC0066E4E3 /* SmartFarming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A8BB5028586FAD0066E4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0A8BB5228586FAD0066E4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsViewController.swift; sourceTree = "<group>"; };
 		B0CF221C285CC55400D31918 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B39921B1AC83543EFF098EC4 /* Pods_SmartFarming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,9 +110,10 @@
 				B057105C285A273200B555C0 /* ListVC.swift */,
 				B0571063285A4C3800B555C0 /* FarmInfoVC.swift */,
 				B0571061285A404F00B555C0 /* farmer.json */,
-				B06643E6285B9996004B643F /* FarmModel.swift */,
+				B06643E6285B9996004B643F /* FarmGlobal.swift */,
 				B06643E9285BAA49004B643F /* FarmTableViewCell.swift */,
 				B0CF221C285CC55400D31918 /* DetailsVC.swift */,
+				B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */,
 			);
 			path = SmartFarming;
 			sourceTree = "<group>";
@@ -242,13 +245,14 @@
 			files = (
 				B057105D285A273200B555C0 /* ListVC.swift in Sources */,
 				B0A8BB4928586FAC0066E4E3 /* ViewController.swift in Sources */,
-				B06643E7285B9996004B643F /* FarmModel.swift in Sources */,
+				B06643E7285B9996004B643F /* FarmGlobal.swift in Sources */,
 				B06643EB285BAA49004B643F /* FarmTableViewCell.swift in Sources */,
 				B0CF221D285CC55400D31918 /* DetailsVC.swift in Sources */,
 				B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */,
 				B0571060285A362200B555C0 /* ServiceResponseType.swift in Sources */,
 				B0571064285A4C3800B555C0 /* FarmInfoVC.swift in Sources */,
 				B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */,
+				B0B7C5C72868F99F006F8384 /* MapDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,17 +16,17 @@ class FarmInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     @IBOutlet weak var plantedDateText: UITextField!
     @IBOutlet weak var harvestDateText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    
     var locationManager = CLLocationManager()
     let datePicker = UIDatePicker()
     var chosenLatitude = ""
     var chosenLongitude = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         createDatePicker()
         createDatePicker2()
-        
         
         mapView.delegate = self
         locationManager.delegate = self
@@ -35,7 +35,7 @@ class FarmInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         locationManager.startUpdatingLocation()
 
         let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
-        recognizer.minimumPressDuration = 2
+        recognizer.minimumPressDuration = 1
         mapView.addGestureRecognizer(recognizer)
     }
     
@@ -72,6 +72,8 @@ class FarmInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         let firestoreDatabase = Firestore.firestore()
         var firestoreReference : DocumentReference? = nil
         
+        // TODO: Boş veri kontrolü yap, makeAlert
+
         let firestoreFarm = ["farmerBy" : Auth.auth().currentUser!.email as Any, "farmName" : self.farmNameText.text!,"plantedVegetables" : self.plantedVegetablesText.text!,"plantedDate" : self.plantedDateText.text!, "harvestDateText" : self.harvestDateText.text!, "latitude" : self.chosenLatitude, "longitude" : self.chosenLongitude, "date" : FieldValue.serverTimestamp(),] as [String : Any]
         
         firestoreReference = firestoreDatabase.collection("Farm").addDocument(data: firestoreFarm, completion: { (error) in

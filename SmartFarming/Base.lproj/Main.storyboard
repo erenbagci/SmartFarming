@@ -76,15 +76,20 @@
             <objects>
                 <viewController id="XvO-cH-YQA" customClass="ListVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a6u-cv-oYf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EfU-Kr-G6w">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="tvs-sk-shu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FarmTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FarmTableViewCell" id="z0e-84-55w" customClass="FarmTableViewCell" customModule="SmartFarming" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="88.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z0e-84-55w" id="hSy-L3-7hl">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -116,11 +121,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="farmNameLabel" destination="sd6-Yk-WGI" id="Dqn-8y-UUg"/>
+                                            <outlet property="farmNameText" destination="sd6-Yk-WGI" id="Dqn-8y-UUg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-MG-eEj">
+                                <rect key="frame" x="154" y="556" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="mapDetailsButtonClicked:" destination="qv4-AD-khh" eventType="touchUpInside" id="Wgf-ID-HYX"/>
+                                    <action selector="mapDetailsButtonClicked:" destination="XvO-cH-YQA" eventType="touchUpInside" id="cdy-DZ-A9Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y7R-NK-fZZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,13 +148,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="GKt-rB-cWk"/>
                     <connections>
+                        <outlet property="searchBar" destination="tvs-sk-shu" id="KMZ-K1-tX1"/>
                         <outlet property="tableView" destination="EfU-Kr-G6w" id="DjZ-gT-wtt"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="homeToLogin" id="nak-Pb-rdL"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeToLogin" modalPresentationStyle="fullScreen" id="nak-Pb-rdL"/>
                         <segue destination="8nj-Ju-B6T" kind="show" identifier="farmInfoVC" id="vDA-lF-oZ0"/>
                         <segue destination="yY7-5t-YG9" kind="show" identifier="toDetailsVC" id="kVX-oK-J9s"/>
+                        <segue destination="ZYW-OO-tPv" kind="show" identifier="mapDetails" id="qgc-mc-XCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy7-OQ-h7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qv4-AD-khh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="-145.27736131934034"/>
         </scene>
@@ -148,64 +166,112 @@
             <objects>
                 <viewController id="yY7-5t-YG9" customClass="DetailsVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j33-Yk-msy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tarla Adı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-r2-KCP">
-                                <rect key="frame" x="29" y="56" width="316" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ekildiği Tarih:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-Zi-deL">
-                                <rect key="frame" x="29" y="181" width="316" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biçileceği Tarih:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNt-UX-DAA">
-                                <rect key="frame" x="29" y="236" width="316" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h15-af-bNp">
-                                <rect key="frame" x="0.0" y="314" width="375" height="353"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h15-af-bNp">
+                                <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ekilen Edilen Ürün:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8l-YO-gbR">
-                                <rect key="frame" x="29" y="117" width="316" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-aJ-nud">
+                                <rect key="frame" x="25" y="66" width="325" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkW-i0-nzp">
+                                <rect key="frame" x="25" y="175" width="325" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnM-oJ-Xk1">
+                                <rect key="frame" x="25" y="229" width="325" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-Tx-yhW">
+                                <rect key="frame" x="25" y="120.5" width="325" height="44.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="ote-qA-LMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P0V-Dh-gfR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P0V-Dh-gfR" firstAttribute="trailing" secondItem="rAC-aJ-nud" secondAttribute="trailing" constant="25" id="1wb-jd-ld1"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="top" secondItem="JkW-i0-nzp" secondAttribute="bottom" constant="10" id="2Bn-85-NkY"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="leading" secondItem="P0V-Dh-gfR" secondAttribute="leading" constant="25" id="4Xb-u0-bvC"/>
+                            <constraint firstItem="h15-af-bNp" firstAttribute="top" secondItem="HnM-oJ-Xk1" secondAttribute="bottom" constant="50" id="5Af-8v-TcM"/>
+                            <constraint firstItem="JkW-i0-nzp" firstAttribute="leading" secondItem="P0V-Dh-gfR" secondAttribute="leading" constant="25" id="5BF-gq-3V8"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="height" secondItem="JkW-i0-nzp" secondAttribute="height" id="7X3-TY-mQf"/>
+                            <constraint firstItem="P0V-Dh-gfR" firstAttribute="trailing" secondItem="JkW-i0-nzp" secondAttribute="trailing" constant="25" id="B4A-i4-ITm"/>
+                            <constraint firstItem="JkW-i0-nzp" firstAttribute="top" secondItem="Sx0-Tx-yhW" secondAttribute="bottom" constant="10" id="Bfx-Zf-fLd"/>
+                            <constraint firstItem="Sx0-Tx-yhW" firstAttribute="top" secondItem="rAC-aJ-nud" secondAttribute="bottom" constant="10" id="Bj1-1W-G8M"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="height" secondItem="rAC-aJ-nud" secondAttribute="height" id="FdD-0I-Lkn"/>
+                            <constraint firstItem="P0V-Dh-gfR" firstAttribute="trailing" secondItem="HnM-oJ-Xk1" secondAttribute="trailing" constant="25" id="GHt-27-xJN"/>
+                            <constraint firstItem="h15-af-bNp" firstAttribute="trailing" secondItem="P0V-Dh-gfR" secondAttribute="trailing" id="HjN-Sy-e4A"/>
+                            <constraint firstItem="Sx0-Tx-yhW" firstAttribute="leading" secondItem="P0V-Dh-gfR" secondAttribute="leading" constant="25" id="JsB-4Y-WSq"/>
+                            <constraint firstItem="P0V-Dh-gfR" firstAttribute="trailing" secondItem="Sx0-Tx-yhW" secondAttribute="trailing" constant="25" id="PTr-qJ-zx5"/>
+                            <constraint firstItem="h15-af-bNp" firstAttribute="height" secondItem="j33-Yk-msy" secondAttribute="height" multiplier="0.5" id="QCF-oN-vQF"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="height" secondItem="Sx0-Tx-yhW" secondAttribute="height" id="RDe-Si-CFp"/>
+                            <constraint firstItem="rAC-aJ-nud" firstAttribute="leading" secondItem="P0V-Dh-gfR" secondAttribute="leading" constant="25" id="TgW-p2-YHP"/>
+                            <constraint firstItem="HnM-oJ-Xk1" firstAttribute="height" secondItem="JkW-i0-nzp" secondAttribute="height" id="itx-QX-XZ4"/>
+                            <constraint firstItem="P0V-Dh-gfR" firstAttribute="bottom" secondItem="h15-af-bNp" secondAttribute="bottom" id="oPW-XD-Owe"/>
+                            <constraint firstItem="rAC-aJ-nud" firstAttribute="top" secondItem="P0V-Dh-gfR" secondAttribute="top" constant="10" id="q4Q-Yc-8is"/>
+                            <constraint firstItem="h15-af-bNp" firstAttribute="leading" secondItem="P0V-Dh-gfR" secondAttribute="leading" id="tqj-Dq-Yra"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Am-7M-oS2"/>
                     <connections>
                         <outlet property="detailsMapView" destination="h15-af-bNp" id="ggq-yn-R76"/>
-                        <outlet property="farmNameLabel" destination="RjD-r2-KCP" id="kPq-kn-Z55"/>
-                        <outlet property="harvestDateLabel" destination="sNt-UX-DAA" id="1KK-9Y-mds"/>
-                        <outlet property="plantedDateLabel" destination="m6N-Zi-deL" id="M0Q-fq-WY7"/>
-                        <outlet property="plantedVegetablesLabel" destination="i8l-YO-gbR" id="xwZ-vs-Uq1"/>
+                        <outlet property="farmNameText" destination="rAC-aJ-nud" id="oa0-PY-Qg7"/>
+                        <outlet property="harvestDateText" destination="HnM-oJ-Xk1" id="Pms-Dj-6mt"/>
+                        <outlet property="plantedDateText" destination="JkW-i0-nzp" id="f83-ua-taL"/>
+                        <outlet property="plantedVegetablesText" destination="Sx0-Tx-yhW" id="QsN-BE-oAW"/>
+                        <segue destination="8nj-Ju-B6T" kind="show" identifier="updateSegue" id="VXY-pK-ErW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txV-yO-rkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="586.95652173913049"/>
         </scene>
+        <!--Map Details View Controller-->
+        <scene sceneID="ohS-LI-A07">
+            <objects>
+                <viewController storyboardIdentifier="mapDetails" id="ZYW-OO-tPv" customClass="MapDetailsViewController" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JsH-t1-9k9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hyJ-kh-mPj">
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PEC-jb-5gX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PEC-jb-5gX" firstAttribute="trailing" secondItem="hyJ-kh-mPj" secondAttribute="trailing" id="QkP-ST-1cj"/>
+                            <constraint firstItem="PEC-jb-5gX" firstAttribute="bottom" secondItem="hyJ-kh-mPj" secondAttribute="bottom" id="mGW-2c-V9u"/>
+                            <constraint firstItem="hyJ-kh-mPj" firstAttribute="top" secondItem="PEC-jb-5gX" secondAttribute="top" id="twg-vk-XNN"/>
+                            <constraint firstItem="hyJ-kh-mPj" firstAttribute="leading" secondItem="PEC-jb-5gX" secondAttribute="leading" id="uaL-gW-BsR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ilp-dC-QcW"/>
+                    <connections>
+                        <outlet property="detailsMapView" destination="hyJ-kh-mPj" id="elI-xa-ZWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22Y-16-jca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="566"/>
+        </scene>
         <!--Farm InfoVC-->
         <scene sceneID="gwc-mF-uc4">
             <objects>
                 <viewController id="8nj-Ju-B6T" customClass="FarmInfoVC" customModule="SmartFarming" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cT0-Br-iFz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="farm name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWs-eS-4gp">
@@ -270,7 +336,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ew8-dd-XWt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kyK-0H-R7e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -287,7 +353,8 @@
         <designable name="Pof-wa-3g7"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="aId-bI-db1"/>
+        <segue reference="7qq-kF-ODg"/>
+        <segue reference="vDA-lF-oZ0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

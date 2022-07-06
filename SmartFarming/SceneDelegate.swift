@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let tabBar = board.instantiateViewController(identifier: "tabBar") as! UINavigationController
                 window?.rootViewController = tabBar
                 if let userEmail = user.email {
-                    FarmModel.sharedInstance.currentUserEmail = userEmail
+                    FarmGlobal.sharedInstance.currentUserEmail = userEmail
                 }
             }
             

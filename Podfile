@@ -13,6 +13,8 @@ pod 'Firebase/Storage'
 pod 'SwiftLint'
 pod 'JSSAlertView'
 pod 'lottie-ios'
+pod 'Firebase/Database'
+
 
 # Pods for SmartFarming
 
