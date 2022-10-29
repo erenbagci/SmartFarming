@@ -9,11 +9,13 @@ import UIKit
 
 class FarmTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var farmNameText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        innerView.layer.cornerRadius = 6
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

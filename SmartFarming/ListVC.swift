@@ -17,6 +17,7 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UISea
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
     var placeNameArray = [String]()
     var documentIdArray = [String]()
     var selectedPlaceId = ""
@@ -37,8 +38,6 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UISea
         getDataFromFirestore()
 
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logoutButtonClicked))
-
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
 
     }
     
@@ -86,10 +85,6 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UISea
                 }
             }
         }
-    }
-    
-    @objc func addButtonClicked() {
-        performSegue(withIdentifier: "farmInfoVC", sender: nil)
     }
     
     @objc func logoutButtonClicked() {
@@ -160,6 +155,10 @@ class ListVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UISea
     
     @IBAction func mapDetailsButtonClicked(_ sender: Any) {
         performSegue(withIdentifier: "mapDetails", sender: nil)
+    }
+    
+    @IBAction func addFarmButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "farmInfoVC", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

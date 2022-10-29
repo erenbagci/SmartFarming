@@ -74,7 +74,7 @@ class FarmInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         
         // TODO: Boş veri kontrolü yap, makeAlert
 
-        let firestoreFarm = ["farmerBy" : Auth.auth().currentUser!.email as Any, "farmName" : self.farmNameText.text!,"plantedVegetables" : self.plantedVegetablesText.text!,"plantedDate" : self.plantedDateText.text!, "harvestDateText" : self.harvestDateText.text!, "latitude" : self.chosenLatitude, "longitude" : self.chosenLongitude, "date" : FieldValue.serverTimestamp(),] as [String : Any]
+        let firestoreFarm = ["farmerBy" : Auth.auth().currentUser!.email as Any, "farmName" : self.farmNameText.text!,"plantedVegetables" : self.plantedVegetablesText.text!,"plantedDate" : self.plantedDateText.text!, "harvestDateText" : self.harvestDateText.text!, "latitude" : self.chosenLatitude, "longitude" : self.chosenLongitude, "date" : FieldValue.serverTimestamp()] as [String : Any]
         
         firestoreReference = firestoreDatabase.collection("Farm").addDocument(data: firestoreFarm, completion: { (error) in
             if error != nil {

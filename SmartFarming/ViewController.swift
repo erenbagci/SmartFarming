@@ -65,14 +65,17 @@ class ViewController: UIViewController {
         }else {
             makeAlert(titleInput: "Error!", messageInput: "Username/Pssword?",responseType: .error)
         }
-        
     }
          
     
     @IBAction func signUpClicked(_ sender: Any) {
+        self.performSegue(withIdentifier: "toSignUpVC", sender: nil)
+
         
-                if let email = emailText.text,let password = passwordText.text {
-                   Auth.auth().createUser(withEmail: email, password: password) { authdata, error in
+        
+               /* if let email = emailText.text,let password = passwordText.text {
+                   Auth.auth().createUser(withEmail: email, password: password
+                   ) { authdata, error in
                        if error != nil {
                            self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error", responseType: .error)
                            
@@ -82,7 +85,7 @@ class ViewController: UIViewController {
                } else {
                    makeAlert(titleInput: " Error!", messageInput: "Username/Password",responseType: .error)
                }
-               
+               */
            }
             
     

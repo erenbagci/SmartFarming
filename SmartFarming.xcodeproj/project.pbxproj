@@ -15,12 +15,14 @@
 		B0571064285A4C3800B555C0 /* FarmInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0571063285A4C3800B555C0 /* FarmInfoVC.swift */; };
 		B06643E7285B9996004B643F /* FarmGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06643E6285B9996004B643F /* FarmGlobal.swift */; };
 		B06643EB285BAA49004B643F /* FarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06643E9285BAA49004B643F /* FarmTableViewCell.swift */; };
+		B07BF32F290C8C1000EC2F00 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07BF32E290C8C1000EC2F00 /* SignUpVC.swift */; };
+		B09D432E290CAE4100936D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09D432D290CAE4000936D71 /* Assets.xcassets */; };
 		B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */; };
 		B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */; };
 		B0A8BB4928586FAC0066E4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8BB4828586FAC0066E4E3 /* ViewController.swift */; };
 		B0A8BB4C28586FAC0066E4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4A28586FAC0066E4E3 /* Main.storyboard */; };
-		B0A8BB4E28586FAD0066E4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */; };
 		B0A8BB5128586FAD0066E4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A8BB4F28586FAD0066E4E3 /* LaunchScreen.storyboard */; };
+		B0B1239E29096A6900722A40 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1239D29096A6900722A40 /* UIButton+.swift */; };
 		B0B7C5C72868F99F006F8384 /* MapDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */; };
 		B0CF221D285CC55400D31918 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF221C285CC55400D31918 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
@@ -35,14 +37,16 @@
 		B0571063285A4C3800B555C0 /* FarmInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmInfoVC.swift; sourceTree = "<group>"; };
 		B06643E6285B9996004B643F /* FarmGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmGlobal.swift; sourceTree = "<group>"; };
 		B06643E9285BAA49004B643F /* FarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTableViewCell.swift; sourceTree = "<group>"; };
+		B07BF32E290C8C1000EC2F00 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		B09D432D290CAE4000936D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A8BB4128586FAC0066E4E3 /* SmartFarming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8BB4428586FAC0066E4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B0A8BB4828586FAC0066E4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B0A8BB4B28586FAC0066E4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A8BB5028586FAD0066E4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0A8BB5228586FAD0066E4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B1239D29096A6900722A40 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsViewController.swift; sourceTree = "<group>"; };
 		B0CF221C285CC55400D31918 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B39921B1AC83543EFF098EC4 /* Pods_SmartFarming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFarming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B057105F285A362200B555C0 /* ServiceResponseType.swift */,
+				B0B1239D29096A6900722A40 /* UIButton+.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -103,7 +108,7 @@
 				B0A8BB4828586FAC0066E4E3 /* ViewController.swift */,
 				B0A8BB4628586FAC0066E4E3 /* SceneDelegate.swift */,
 				B0A8BB4A28586FAC0066E4E3 /* Main.storyboard */,
-				B0A8BB4D28586FAD0066E4E3 /* Assets.xcassets */,
+				B09D432D290CAE4000936D71 /* Assets.xcassets */,
 				B0A8BB4F28586FAD0066E4E3 /* LaunchScreen.storyboard */,
 				B0A8BB5228586FAD0066E4E3 /* Info.plist */,
 				B057105A285A162600B555C0 /* GoogleService-Info.plist */,
@@ -114,6 +119,7 @@
 				B06643E9285BAA49004B643F /* FarmTableViewCell.swift */,
 				B0CF221C285CC55400D31918 /* DetailsVC.swift */,
 				B0B7C5C62868F99F006F8384 /* MapDetailsViewController.swift */,
+				B07BF32E290C8C1000EC2F00 /* SignUpVC.swift */,
 			);
 			path = SmartFarming;
 			sourceTree = "<group>";
@@ -188,9 +194,9 @@
 			files = (
 				B0A8BB5128586FAD0066E4E3 /* LaunchScreen.storyboard in Resources */,
 				B057105B285A162600B555C0 /* GoogleService-Info.plist in Resources */,
-				B0A8BB4E28586FAD0066E4E3 /* Assets.xcassets in Resources */,
 				B0A8BB4C28586FAC0066E4E3 /* Main.storyboard in Resources */,
 				B0571062285A404F00B555C0 /* farmer.json in Resources */,
+				B09D432E290CAE4100936D71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +253,11 @@
 				B0A8BB4928586FAC0066E4E3 /* ViewController.swift in Sources */,
 				B06643E7285B9996004B643F /* FarmGlobal.swift in Sources */,
 				B06643EB285BAA49004B643F /* FarmTableViewCell.swift in Sources */,
+				B07BF32F290C8C1000EC2F00 /* SignUpVC.swift in Sources */,
 				B0CF221D285CC55400D31918 /* DetailsVC.swift in Sources */,
 				B0A8BB4528586FAC0066E4E3 /* AppDelegate.swift in Sources */,
 				B0571060285A362200B555C0 /* ServiceResponseType.swift in Sources */,
+				B0B1239E29096A6900722A40 /* UIButton+.swift in Sources */,
 				B0571064285A4C3800B555C0 /* FarmInfoVC.swift in Sources */,
 				B0A8BB4728586FAC0066E4E3 /* SceneDelegate.swift in Sources */,
 				B0B7C5C72868F99F006F8384 /* MapDetailsViewController.swift in Sources */,
@@ -408,6 +416,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +446,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
